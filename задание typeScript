@@ -8,7 +8,6 @@ myHobby = "музыка";
 // myHobby = "чтение";
 
 
-// 2.
 type Extra = "математика" | "физика" | "рисование" | "программирование";
 
 type Facultative = Hobby | Extra;
@@ -18,16 +17,12 @@ let f2: Facultative = "математика";
  let f3: Facultative = "биология";
 
 
-// 5. Тип Age
 type Age = 16 | 17 | 18 | 19;
 
-// 6. Тип Group
 type Group = "A" | "B" | "C";
 
-// 15. Тип Level
 type Level = 1 | 2 | 3 | 4;
 
-// 4. 
 interface StudentI {
   name: string;
   age: Age;
@@ -51,5 +46,3 @@ const studentI2: StudentI = {
   group: "B",
   level: 3
 };
-
-// для меня разницы нету
