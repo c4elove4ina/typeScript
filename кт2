@@ -1,0 +1,22 @@
+type Discount = 
+  | { kind: "percent"; value: number }   // процентная скидка (0-100)
+  | { kind: "fixed"; valueRub: number }; // фиксированная скидка в рублях
+
+class Calculator {
+  private discount: Discount | null = null;
+  
+  setDiscount(discount: Discount): void {
+    this.discount = discount;
+  }
+  
+  applyDiscount(amount: number): number {
+    if (!this.discount) return amount;
+    
+    switch (this.discount.kind) {
+      case "percent":
+        return amount * (1 - this.discount.value / 100);
+      case "fixed":
+        return Math.max(0, amount - this.discount.valueRub);
+    }
+  }
+}
