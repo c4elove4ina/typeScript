@@ -27,32 +27,6 @@ type Group = "A" | "B" | "C";
 // 15. Тип Level
 type Level = 1 | 2 | 3 | 4;
 
-
-// 3. 
-type Student = {
-  name: string;
-  age: Age;
-  facultative: Facultative;
-  group: Group;
-  level: Level;
-};
-
-const student1: Student = {
-  name: "Иван",
-  age: 17,
-  facultative: "спорт",
-  group: "A",
-  level: 1
-};
-
-const student2: Student = {
-  name: "Анна",
-  age: 20,
-  facultative: "математика",
-  group: "D",
-  level: 2
-};
-
 // 4. 
 interface StudentI {
   name: string;
